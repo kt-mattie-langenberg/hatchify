@@ -14,6 +14,7 @@ export function finalizeControl(
     default: props.default ?? null,
     regex: props.regex ?? /(.*?)/,
     readOnly: props.readOnly ?? false,
+    xssExempt: props.xssExempt ?? false,
     ui: {
       enableCaseSensitiveContains:
         props.ui?.enableCaseSensitiveContains ?? false,

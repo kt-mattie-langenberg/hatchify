@@ -39,7 +39,8 @@
     "dotenv": "^16.3.1",
     "jsonapi-serializer": "^3.6.7",
     "node-fetch": "^3.3.2",
-    "typedoc": "^0.25.4"
+    "typedoc": "^0.25.4",
+    "xss": "^1.0.14"
   },
   "devDependencies": {
     "@bitovi/eslint-config": "^1.6.0",

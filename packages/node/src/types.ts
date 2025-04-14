@@ -46,6 +46,12 @@ export interface HatchifyOptions {
    * Various options for connecting to a database
    */
   database?: DatabaseOptions
+  /**
+   * Enable XSS protection validation
+   * When enabled, input will be validated against sanitized version
+   * to ensure no XSS attacks are present
+   */
+  xssProtection?: boolean
 }
 
 export const HatchifySymbolModel = Symbol("hatchify")

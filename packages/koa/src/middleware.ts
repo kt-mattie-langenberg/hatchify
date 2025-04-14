@@ -10,6 +10,8 @@ import {
 import type Koa from "koa"
 import type { Middleware as KoaMiddleware } from "koa"
 
+import { Hatchify } from "./koa.js"
+
 /**
  * Provides a set of exported functions, per Model, that
  * provide Koa Middleware for each operation
@@ -84,6 +86,19 @@ export function buildMiddlewareForModel(
           path: context.path,
           querystring: context.querystring,
         }
+
+        // Validate request body for XSS if protection is enabled
+        if (
+          request.body &&
+          hatchify instanceof Hatchify &&
+          hatchify.xssProtection
+        ) {
+          const schema = hatchify.schemas[modelName]
+          if (schema) {
+            hatchify.validateXSS(request.body, schema)
+          }
+        }
+
         const response = await genericFunction(request, next)
 
         if (response) {

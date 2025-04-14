@@ -18,6 +18,7 @@ export type ControlTypes =
   | "Date"
   | "Dateonly"
   | "enum"
+  | "json"
 
 export * from "../assembler/types.js"
 export * from "../relationships/types.js"
@@ -60,6 +61,17 @@ export interface PartialControlType<PrimitiveType, TRequired extends boolean> {
   primary?: boolean
   default?: PrimitiveType | (() => PrimitiveType) | null
   ui?: HatchifyBaseUIOptions
+  xssExempt?: boolean
+}
+
+export interface FinalControlType<PrimitiveType, TRequired extends boolean>
+  extends Omit<PartialControlType<PrimitiveType, TRequired>, "allowNullInfer"> {
+  allowNull: boolean
+  readOnly: boolean
+  primary: boolean
+  default: PrimitiveType | (() => PrimitiveType) | null
+  ui: HatchifyBaseUIOptions
+  xssExempt: boolean
 }
 
 export interface PartialSequelizeDataType<ArgsType, PrimitiveType> {

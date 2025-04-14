@@ -11,6 +11,7 @@ export function finalizeControl(
     primary: !!props.primary,
     default: props.default ?? null,
     readOnly: props.readOnly ?? false,
+    xssExempt: props.xssExempt ?? false,
     ui: {
       displayName: props?.ui?.displayName ?? null,
       hidden: props?.ui?.hidden ?? false,

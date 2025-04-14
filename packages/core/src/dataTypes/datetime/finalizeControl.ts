@@ -14,6 +14,7 @@ export function finalizeControl(
     default: props.default ?? null,
     step: props.step || 0,
     readOnly: props.readOnly ?? false,
+    xssExempt: props.xssExempt ?? false,
     ui: {
       displayName: props?.ui?.displayName ?? null,
       hidden: props?.ui?.hidden ?? false,
