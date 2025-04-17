@@ -24,7 +24,18 @@
     "paths": {
       "@hatchifyjs/core": ["./packages/core/dist"],
       "@hatchifyjs/crypto": ["./packages/crypto"],
-      "@hatchifyjs/node": ["./packages/node/dist"]
+      "@hatchifyjs/node": ["./packages/node/dist"],
+      "@hatchifyjs/express": ["./packages/express/dist"],
+      "@hatchifyjs/koa": ["./packages/koa/dist"],
+      "@hatchifyjs/rest-client": ["./packages/rest-client/dist"],
+      "@hatchifyjs/rest-client-jsonapi": [
+        "./packages/rest-client-jsonapi/dist"
+      ],
+      "@hatchifyjs/react": ["./packages/react/dist"],
+      "@hatchifyjs/react-rest": ["./packages/react-rest/dist"],
+      "@hatchifyjs/react-jsonapi": ["./packages/react-jsonapi/dist"],
+      "@hatchifyjs/react-ui": ["./packages/react-ui/dist"],
+      "@hatchifyjs/design-mui": ["./packages/design-mui/dist"]
     }
   },
   "exclude": [
@@ -34,5 +45,19 @@
     "**/mocks/**/*",
     "**/setupTests.ts",
     "**/testing/**/*"
+  ],
+  "references": [
+    { "path": "./packages/core" },
+    { "path": "./packages/create" },
+    { "path": "./packages/design-mui" },
+    { "path": "./packages/express" },
+    { "path": "./packages/koa" },
+    { "path": "./packages/node" },
+    { "path": "./packages/react" },
+    { "path": "./packages/react-jsonapi" },
+    { "path": "./packages/react-rest" },
+    { "path": "./packages/react-ui" },
+    { "path": "./packages/rest-client" },
+    { "path": "./packages/rest-client-jsonapi" }
   ]
 }

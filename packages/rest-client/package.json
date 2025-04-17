@@ -13,7 +13,7 @@
     "test:dev": "vitest",
     "test:coverage": "vitest run --coverage",
     "clean": "rm -rf tsconfig.tsbuildinfo dist",
-    "build": "tsc"
+    "build": "tsc -b"
   },
   "devDependencies": {
     "@types/lodash.isempty": "^4.4.9",

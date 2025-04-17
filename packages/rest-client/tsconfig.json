@@ -1,9 +1,15 @@
 {
   "extends": "../../tsconfig.json",
-  "include": ["src"],
   "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "allowJs": true,
+    "outDir": "dist",
     "rootDir": "src",
-    "outDir": "dist"
-  }
+    "declaration": true,
+    "composite": true
+  },
+  "include": ["src"],
+  "exclude": ["dist/*", "**/*.spec.ts", "**/*.test.ts"],
+  "references": [{ "path": "../core" }]
 }

@@ -3,11 +3,13 @@
   "compilerOptions": {
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
-    "rootDir": "src",
     "outDir": "dist",
+    "rootDir": "src",
     "sourceMap": true,
-    "strict": true,
-    "strictNullChecks": true
+    "declaration": true,
+    "composite": true
   },
-  "exclude": ["dist/*"]
+  "include": ["src/**/*"],
+  "exclude": ["dist/*", "**/*.spec.ts", "**/*.test.ts"],
+  "references": [{ "path": "../core" }]
 }

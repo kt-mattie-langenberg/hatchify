@@ -13,7 +13,7 @@
     "test:dev": "vitest",
     "test:coverage": "vitest run --coverage",
     "clean": "rm -rf tsconfig.tsbuildinfo dist",
-    "build": "tsc"
+    "build": "tsc -b"
   },
   "dependencies": {
     "@hatchifyjs/design-mui": "^0.2.2",

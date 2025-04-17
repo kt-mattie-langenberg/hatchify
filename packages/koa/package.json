@@ -10,7 +10,7 @@
   },
   "scripts": {
     "prepublish": "npm run clean && npm run build",
-    "build": "tsc",
+    "build": "tsc -b",
     "build:watch": "tsc --watch",
     "clean": "rm -rf tsconfig.tsbuildinfo dist",
     "depcheck": "depcheck .",

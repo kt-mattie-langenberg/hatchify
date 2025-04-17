@@ -1,9 +1,14 @@
 {
   "compilerOptions": {
     "jsx": "react-jsx",
-    "outDir": "dist",
-    "rootDir": "src"
+    "outDir": "dist"
   },
   "extends": "../../tsconfig.json",
-  "include": ["src"]
+  "include": ["src"],
+  "references": [
+    { "path": "../core" },
+    { "path": "../react-rest" },
+    { "path": "../rest-client" },
+    { "path": "../rest-client-jsonapi" }
+  ]
 }
